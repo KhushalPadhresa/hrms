@@ -68,7 +68,7 @@ interface EmployeeProfileProps {
     name: string;
     email: string;
     avatar?: string;
-  };
+  } | null;
   onUpdateUser?: (user: {
     name: string;
     email: string;
