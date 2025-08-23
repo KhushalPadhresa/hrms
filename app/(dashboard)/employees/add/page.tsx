@@ -1,8 +1,6 @@
 "use client";
 
 import { EmployeeForm } from "@/components/employee-form";
-import { DashboardLayout } from "@/components/dashboard-layout";
-import { AuthGuard } from "@/components/auth-guard";
 import { useEmployee } from "@/contexts/employee-context";
 import { useRouter } from "next/navigation";
 
@@ -19,11 +17,5 @@ export default function AddEmployee() {
     router.push("/employees");
   };
 
-  return (
-    <AuthGuard>
-      <DashboardLayout>
-        <EmployeeForm mode="add" onSave={onSave} onCancel={onCancel} />
-      </DashboardLayout>
-    </AuthGuard>
-  );
+  return <EmployeeForm mode="add" onSave={onSave} onCancel={onCancel} />;
 }

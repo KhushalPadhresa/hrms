@@ -46,12 +46,6 @@ export function AppSidebar({ onLogout, user }: AppSidebarProps) {
       href: "/employees",
     },
     {
-      id: "add-employee",
-      label: "Add Employee",
-      icon: UserPlus,
-      href: "/employees/add",
-    },
-    {
       id: "leave-management",
       label: "Leave Management",
       icon: Calendar,

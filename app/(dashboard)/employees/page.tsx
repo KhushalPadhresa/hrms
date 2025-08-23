@@ -1,8 +1,6 @@
 "use client";
 
 import { EmployeeManagement } from "@/components/employee-management";
-import { DashboardLayout } from "@/components/dashboard-layout";
-import { AuthGuard } from "@/components/auth-guard";
 import { useEmployee } from "@/contexts/employee-context";
 import { useRouter } from "next/navigation";
 
@@ -19,15 +17,11 @@ export default function Employees() {
   };
 
   return (
-    <AuthGuard>
-      <DashboardLayout>
-        <EmployeeManagement
-          employees={employees}
-          onEditEmployee={handleEditEmployee}
-          onDeleteEmployee={handleDeleteEmployee}
-          onAddEmployee={handleAddEmployee}
-        />
-      </DashboardLayout>
-    </AuthGuard>
+    <EmployeeManagement
+      employees={employees}
+      onEditEmployee={handleEditEmployee}
+      onDeleteEmployee={handleDeleteEmployee}
+      onAddEmployee={handleAddEmployee}
+    />
   );
 }
